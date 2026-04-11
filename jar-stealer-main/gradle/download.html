@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download - LOGO Executor</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      background: #000000;
+      overflow-x: hidden;
+    }
+    
+    .glow-text {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    
+    .card-glow {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .card-glow:hover {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .gradient-border {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, #ffffff, #e0e0e0);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .download-btn:hover {
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.5), 0 6px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="text-white">
+  
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-xl font-bold">LOGO</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm text-gray-400 hover:text-white transition">Home</a>
+          <a href="about.html" class="text-sm text-gray-400 hover:text-white transition">About</a>
+          <a href="help.html" class="text-sm text-gray-400 hover:text-white transition">Help</a>
+          <a href="index.html#executor" class="text-sm text-gray-400 hover:text-white transition">Executor</a>
+          <a href="download.html" class="text-sm text-white hover:text-gray-300 transition">Download</a>
+          <a href="credits.html" class="text-sm text-gray-400 hover:text-white transition">Credits</a>
+          <a href="donate.html" class="text-sm text-gray-400 hover:text-white transition">Donate</a>
+        </div>
+        
+        <a href="https://discord.com/invite/" target="_blank" class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.077.077 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+          Join Discord
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Download Content -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-5xl font-bold mb-6 glow-text text-center">Download LOGO</h1>
+      <p class="text-gray-400 text-lg leading-relaxed mb-12 text-center">
+        Get the latest version of LOGO - completely free and keyless.
+      </p>
+
+      <!-- Main Download Card -->
+      <div class="gradient-border rounded-xl p-12 card-glow text-center mb-12">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 mb-6">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold mb-3">LOGO v1.3.15</h2>
+        <p class="text-gray-400 mb-2">Latest stable release</p>
+        <p class="text-sm text-gray-500 mb-8">Released: December 25, 2025 | Size: 105.7 MB</p>
+        
+        <!-- Modified button to download LOGO.rar file -->
+        <a href="downloading.html" class="download-btn text-black px-10 py-4 rounded-lg font-bold text-lg inline-flex items-center gap-3 mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          Download for Windows
+        </a>
+
+        <p class="text-xs text-gray-500">By downloading, you agree to our terms of service</p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="gradient-border rounded-xl p-6 text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold mb-2">No Keys Required</h3>
+          <p class="text-sm text-gray-400">100% keyless system</p>
+        </div>
+
+        <div class="gradient-border rounded-xl p-6 text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold mb-2">Lightning Fast</h3>
+          <p class="text-sm text-gray-400">Instant execution</p>
+        </div>
+
+        <div class="gradient-border rounded-xl p-6 text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3 class="font-bold mb-2">Auto Updates</h3>
+          <p class="text-sm text-gray-400">Always up-to-date</p>
+        </div>
+      </div>
+
+      <!-- System Requirements -->
+      <div class="gradient-border rounded-xl p-8 card-glow">
+        <h2 class="text-2xl font-bold mb-6">System Requirements</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold mb-3 text-gray-300">Minimum</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>Windows 10 (64-bit)</li>
+              <li>Intel Core i3 or equivalent</li>
+              <li>4 GB RAM</li>
+              <li>100 MB free storage</li>
+              <li>.NET Framework 4.8</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3 text-gray-300">Recommended</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>Windows 11 (64-bit)</li>
+              <li>Intel Core i5 or better</li>
+              <li>8 GB RAM or more</li>
+              <li>500 MB free storage</li>
+              <li>Latest .NET Framework</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 px-6">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2026 LOGO. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

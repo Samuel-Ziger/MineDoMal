@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: void
+Specification-Vendor: void
+Specification-Version: 1
+Implementation-Title: void
+Implementation-Version: 1.0.0
+Implementation-Vendor: void
+

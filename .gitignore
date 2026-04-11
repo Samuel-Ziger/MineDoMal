@@ -1,0 +1,4 @@
+# Variáveis e segredos (nunca versionar)
+.env
+**/.env
+discord-bot/env

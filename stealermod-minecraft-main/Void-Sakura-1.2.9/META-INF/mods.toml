@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT"
+
+[[mods]]
+modId="voidmod"
+version="1.0.0"
+displayName="void"
+description="void Mod - Minecraft 1.21.1+"
+authors="void"
+
+[[dependencies.voidmod]]
+modId="forge"
+mandatory=true
+versionRange="[52,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.voidmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,)"
+ordering="NONE"
+side="CLIENT"
